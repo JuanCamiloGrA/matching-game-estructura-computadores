@@ -1,0 +1,284 @@
+:root {
+    --primary: #6a5acd;
+    --secondary: #ffa500;
+    --success: #4caf50;
+    --danger: #f44336;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --background: #f0f2f5;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background);
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+}
+
+h2 {
+    color: var(--secondary);
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+h3 {
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.game-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px var(--shadow);
+}
+
+.timer {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.score {
+    display: flex;
+    gap: 20px;
+}
+
+.score span {
+    font-weight: 600;
+}
+
+#correct-count {
+    color: var(--success);
+}
+
+#incorrect-count {
+    color: var(--danger);
+}
+
+.instructions, .game-board, .game-over {
+    background-color: white;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px var(--shadow);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.game-board {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.concepts-container, .definitions-container {
+    width: 100%;
+}
+
+.draggable-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.draggable {
+    background-color: var(--primary);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 50px;
+    cursor: grab;
+    transition: all 0.3s ease;
+    user-select: none;
+    box-shadow: 0 4px 8px var(--shadow);
+}
+
+.draggable:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px var(--shadow);
+}
+
+.draggable.dragging {
+    opacity: 0.5;
+    cursor: grabbing;
+}
+
+.drop-targets {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.drop-target {
+    background-color: var(--light);
+    padding: 15px;
+    border-radius: 15px;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.drop-target p {
+    margin-bottom: 10px;
+}
+
+.drop-zone {
+    height: 50px;
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.drop-zone.highlight {
+    border: 2px dashed var(--primary);
+    background-color: rgba(106, 90, 205, 0.1);
+}
+
+.drop-zone.correct {
+    border: 2px solid var(--success);
+    background-color: rgba(76, 175, 80, 0.1);
+}
+
+.drop-zone.incorrect {
+    border: 2px solid var(--danger);
+    background-color: rgba(244, 67, 54, 0.1);
+}
+
+.dropped-item {
+    width: 100%;
+    padding: 8px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.dropped-item.correct {
+    background-color: var(--success);
+    color: white;
+}
+
+.dropped-item.incorrect {
+    background-color: var(--danger);
+    color: white;
+}
+
+button {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px var(--shadow);
+}
+
+button:hover {
+    background-color: #5a4acd;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px var(--shadow);
+}
+
+.feedback {
+    margin: 20px 0;
+}
+
+.feedback-item {
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.feedback-item.correct {
+    background-color: rgba(76, 175, 80, 0.1);
+    border-left: 4px solid var(--success);
+}
+
+.feedback-item.incorrect {
+    background-color: rgba(244, 67, 54, 0.1);
+    border-left: 4px solid var(--danger);
+}
+
+.hidden {
+    display: none;
+}
+
+.final-score {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 20px 0;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .game-board {
+        flex-direction: row;
+    }
+
+    .concepts-container, .definitions-container {
+        width: 50%;
+    }
+
+    .draggable-items {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .game-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .drop-targets {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+}

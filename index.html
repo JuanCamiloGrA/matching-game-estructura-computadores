@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Emparejamiento - Arquitectura de Computadores</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Juego de Emparejamiento</h1>
+            <h2>Arquitectura de Computadores</h2>
+        </header>
+
+        <div class="game-info">
+            <div class="timer">
+                <span class="timer-label">Tiempo:</span>
+                <span id="timer-value">180</span>s
+            </div>
+            <div class="score">
+                <span>Correctas: <span id="correct-count">0</span></span>
+                <span>Incorrectas: <span id="incorrect-count">0</span></span>
+            </div>
+        </div>
+
+        <div class="game-container">
+            <div id="instructions" class="instructions">
+                <h3>Instrucciones</h3>
+                <p>Arrastra cada concepto hasta su definición correcta. ¡Tienes 3 minutos!</p>
+                <button id="start-button">Comenzar Juego</button>
+            </div>
+
+            <div id="game-board" class="game-board hidden">
+                <div class="concepts-container">
+                    <h3>Conceptos</h3>
+                    <div id="concepts" class="draggable-items"></div>
+                </div>
+                <div class="definitions-container">
+                    <h3>Definiciones</h3>
+                    <div id="definitions" class="drop-targets"></div>
+                </div>
+            </div>
+
+            <div id="game-over" class="game-over hidden">
+                <h3>¡Tiempo Finalizado!</h3>
+                <div class="final-score">
+                    <p>Puntuación Final: <span id="final-score">0</span> correctas</p>
+                </div>
+                <div id="feedback" class="feedback"></div>
+                <button id="restart-button">Jugar de Nuevo</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
