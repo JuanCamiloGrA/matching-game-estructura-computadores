@@ -25,6 +25,17 @@ Este proyecto consiste en un juego interactivo de emparejamiento (matching) dond
 - JavaScript vanilla (sin frameworks)
 - API de Drag and Drop de HTML5
 
+## Desarrollo con Windsurf y Modelos AI
+
+Este proyecto fue desarrollado utilizando el IDE Windsurf con sus Agentes Autónomos "Flows", una nueva plataforma de desarrollo basada en VSCode que aprovecha la inteligencia artificial para asistir en la creación de software.
+
+> [!NOTE]
+> El desarrollo completo de esta aplicación, desde la escritura del prompt inicial hasta el despliegue en GitHub Pages, tomó menos de 5 minutos, demostrando la eficiencia de la combinación de Windsurf y los modelos AI.
+
+Para la generación y corrección de código se utilizaron los siguientes modelos AI:
+- **Claude 3.7 Sonnet Thinking**: Para la generación de código principal y lógica del juego
+- **Deepseek V3**: Para corrección de errores mínimos y optimización de código
+
 ## Despliegue
 
 ### Opción 1: GitHub Pages
