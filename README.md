@@ -1,5 +1,7 @@
 # Juego de Emparejamiento - Arquitectura de Computadores
 
+[![Demo en Vivo](https://img.shields.io/badge/Demo_En_Vivo-Acceder%20al%20Juego-blue?style=for-the-badge&logo=github)](https://juancamilogra.github.io/matching-game-estructura-computadores/)
+
 Este proyecto consiste en un juego interactivo de emparejamiento (matching) donde los usuarios deben relacionar conceptos de arquitectura de computadores con sus definiciones correctas mediante la funcionalidad de arrastrar y soltar (drag and drop).
 
 ## Características
@@ -29,7 +31,7 @@ Este proyecto consiste en un juego interactivo de emparejamiento (matching) dond
 
 Este proyecto fue desarrollado utilizando el IDE Windsurf con sus Agentes Autónomos "Flows", una nueva plataforma de desarrollo basada en VSCode que aprovecha la inteligencia artificial para asistir en la creación de software.
 
-> [!NOTE]
+> [!INFO]
 > El desarrollo completo de esta aplicación, desde la escritura del prompt inicial hasta el despliegue en GitHub Pages, tomó menos de 5 minutos, demostrando la eficiencia de la combinación de Windsurf y los modelos AI.
 
 Para la generación y corrección de código se utilizaron los siguientes modelos AI:
