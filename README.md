@@ -84,3 +84,13 @@ Modifica el array `concepts` en `script.js` para cambiar los conceptos y definic
 
 ## 👤 Autor 👤
 Desarrollado como actividad complementaria sobre arquitectura de computadores por [Juan Camilo Grisales Arias](https://github.com/juancamilogra) usando lenguaje natural.
+
+## Licencia
+
+Este proyecto está bajo la licencia [Creative Commons Attribution-ShareAlike 4.0 International](LICENSE). Esto significa que puedes:
+- **Compartir** - copiar y redistribuir el material en cualquier medio o formato
+- **Adaptar** - remezclar, transformar y construir sobre el material
+
+Bajo las siguientes condiciones:
+- **Atribución** - Debes dar crédito adecuado, proporcionar un enlace a la licencia e indicar si se realizaron cambios
+- **CompartirIgual** - Si remezclas, transformas o creas a partir del material, debes distribuir tu contribución bajo la misma licencia
